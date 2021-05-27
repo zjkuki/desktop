@@ -250,7 +250,7 @@ jobs:
       - name: Update NPM
         run: |
           npm install -g npm@7
-          npm install -g node-gyp@5.1
+          npm install -g node-gyp@7
           npm config set node_gyp $(npm prefix -g)/lib/node_modules/node-gyp/bin/node-gyp.js
 
       - name: Set Node options
@@ -363,8 +363,6 @@ jobs:
         env:
           APPLE_ID_USERNAME: ${{ secrets.APPLE_ID_USERNAME }}
           APPLE_ID_PASSWORD: ${{ secrets.APPLE_ID_PASSWORD }}
-          SDKROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/
-          SDK_DIR: /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/
 
       - name: Upload .pkg artifact
         if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/rc'
