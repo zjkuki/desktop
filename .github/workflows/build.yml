@@ -254,6 +254,12 @@ jobs:
   macos:
     runs-on: macos-latest
     steps:
+
+      - name: Set up Python
+        uses: actions/setup-python@dc73133d4da04e56a135ae2246682783cc7c7cb6
+        with:
+          python-version: '3.9'
+
       - name: Set up Node
         uses: actions/setup-node@46071b5c7a2e0c34e49c3cb8a0e792e86e18d5ea
         with:
@@ -369,7 +375,6 @@ jobs:
         run: ./scripts/safari-build.ps1 -mas -copyonly
 
       - name: Build application for App Store
-        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/rc'
         run: npm run dist:mac:mas
         env:
           APPLE_ID_USERNAME: ${{ secrets.APPLE_ID_USERNAME }}
