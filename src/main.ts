@@ -112,8 +112,8 @@ export class Main {
         this.keytarStorageListener = new KeytarStorageListener('Bitwarden');
 
         if (process.platform === 'win32') {
-            const BiometricWindowsMain = require('jslib/electron/biometric.windows.main').default;
-            this.biometricMain = new BiometricWindowsMain(this.storageService, this.i18nService, this.windowMain);
+            const BiometricDarwinMain = require('jslib/electron/biometric.darwin.main').default;
+            this.biometricMain = new BiometricDarwinMain(this.storageService, this.i18nService);
         } else if (process.platform === 'darwin') {
             const BiometricDarwinMain = require('jslib/electron/biometric.darwin.main').default;
             this.biometricMain = new BiometricDarwinMain(this.storageService, this.i18nService);

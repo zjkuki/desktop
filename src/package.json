@@ -18,7 +18,6 @@
     "electron-log": "4.3.5",
     "electron-store": "8.0.0",
     "electron-updater": "4.3.9",
-    "forcefocus": "^1.1.0",
     "keytar": "7.6.0",
     "node-ipc": "^9.1.4",
     "regedit": "^3.0.3",
