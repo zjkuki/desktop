@@ -287,6 +287,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "2015": "^0.0.1",
     "@angular/animations": "^12.2.13",
     "@angular/cdk": "^12.2.13",
     "@angular/common": "^12.2.13",
@@ -300,6 +301,7 @@
     "@bitwarden/jslib-common": "file:jslib/common",
     "@bitwarden/jslib-electron": "file:jslib/electron",
     "ngx-toastr": "14.1.4",
+    "node-abi": "^3.5.0",
     "node-ipc": "^9.1.4",
     "nord": "^0.2.1",
     "regedit": "^3.0.3",
